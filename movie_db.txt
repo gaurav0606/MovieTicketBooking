@@ -1,0 +1,25 @@
+create database movie_db;
+
+use movie_db;
+
+create table login(userid varchar(100), password varchar(20));
+
+create table users(fname varchar(50),lname varchar(50), emailid varchar(100), mobile varchar(10),secret_question varchar(500), answer varchar(500));
+
+create table movies(mcode varchar(20),mname varchar(50), description varchar(500), cast varchar(500), director varchar(100), producer varchar(100), language varchar(10), duration int,pic1 longblob);
+
+create table screen(sno int, no_sofa int, no_premium int,no_exec int);
+
+create table movie_screen(sno int,mcode varchar(20),start_date date,timings varchar(200),cost_sofa int, cost_premium int,cost_exec int);
+
+create table feedback(name varchar(100), emailid varchar(50) ,mobile varchar(10),feedback varchar(500));
+
+create table bookings(b_no varchar(50),b_date date, emailid varchar(100),mcode varchar(50),movie_date date,timing varchar(10),sno int, total_tickets int, type varchar(20), seatno varchar(100),grand_total int);
+
+insert into login values('admin@movie.com' ,'admin123');
+
+insert into users values('admin' ,'admin','admin@movie.com','9999999999','fav color','red');
+
+
+
+		
